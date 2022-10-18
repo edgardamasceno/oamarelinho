@@ -1,0 +1,9 @@
+### Find All Jobs
+http://localhost:3000/jobs
+
+### Find One Job by ID
+http://localhost:3000/jobs/2
+
+### Search Jobs by Term
+http://localhost:3000/jobs/search?term=http://localhost:3000/jobs/search?term=software engenheiro de software sao paulo
+ 
