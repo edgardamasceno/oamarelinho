@@ -1,9 +1,8 @@
 ### Find All Jobs
-http://localhost:3000/jobs
+http://localhost:3000/api/v1/jobs
 
 ### Find One Job by ID
-http://localhost:3000/jobs/2
+http://localhost:3000/api/v1/jobs/2
 
 ### Search Jobs by Term
-http://localhost:3000/jobs/search?term=http://localhost:3000/jobs/search?term=software engenheiro de software sao paulo
- 
+http://localhost:3000/api/v1/jobs/search?term=sanar atendente vendedor
