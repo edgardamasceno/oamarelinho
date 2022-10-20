@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './styles.scss';
 
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
 }
 
 export const Card = (props: Props) => {
+
+    const [isOpen, toggleOpen] = useState(false);
 
     const {
         id,
@@ -47,12 +50,12 @@ export const Card = (props: Props) => {
                     <h1>Mais informações sobre a vaga de emprego:</h1>
                 </header>
                 <main>
-                    <p>{description}</p>
+                    <p className={isOpen ? 'opened' : 'closed'}>{description}</p>
                 </main>
             </main>
             <footer>
                 <span>{cityName}, {stateName}</span>
-                <button>Ver vaga</button>
+                <button onClick={() => toggleOpen(!isOpen)} className={isOpen ? 'less' : 'more'}>{isOpen ? "Mostrar menos" : "Mostrar mais"}</button>
             </footer>
         </article>
     );

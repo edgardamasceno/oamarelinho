@@ -19,7 +19,7 @@ article.Card {
             width: auto;
             h1{
                 font-size: 1.6rem;
-                line-height: 1.5rem;
+                line-height: 2rem;
                 font-weight: 600;
                 color: #6f5192;
             }
@@ -54,7 +54,7 @@ article.Card {
         }
         main{
             padding: 0;
-            p{
+            p.closed {
                 font-size: 1.3rem;
                 line-height: 1.5rem;
                 margin-top: 5px;
@@ -63,8 +63,13 @@ article.Card {
                 text-overflow: ellipsis;
                 display: -webkit-box;
                 -webkit-line-clamp: 2; /* number of lines to show */
-                line-clamp: 2; 
                 -webkit-box-orient: vertical;
+            }
+            p.opened {
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+                margin-top: 5px;
+                text-align: justify;
             }
         }
     }
@@ -79,10 +84,10 @@ article.Card {
             line-height: 1.3rem;
             color: #999999;
         }
-        button{
+        button.more{
             cursor: pointer;
             height: 30px;
-            width: 80px;
+            width: 120px;
             font-weight: 800;
             background-color: gold;
             border: none;
@@ -91,8 +96,19 @@ article.Card {
                 background-color: #6f5192;
                 color: white;
             }
-        }
-
-        
+        } 
+        button.less{
+            cursor: pointer;
+            height: 30px;
+            width: 120px;
+            font-weight: 800;
+            background-color: #6f5192;
+            border: none;
+            border-radius: 0;
+            color: white;
+            &:hover{
+                background-color: gold;
+            }
+        }   
     }
 }
